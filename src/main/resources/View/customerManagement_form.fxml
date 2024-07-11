@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNodeCus" prefHeight="711.0" prefWidth="1040.0" style="-fx-background-color: #090e36;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.controller.CustomerManagementFormController">
+   <children>
+      <ImageView fitHeight="711.0" fitWidth="1040.0" layoutX="-5.0" layoutY="-4.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Icons/wallpaper2you_71560.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </ImageView>
+      <TableView fx:id="tblCustomer" layoutX="418.0" layoutY="150.0" prefHeight="265.0" prefWidth="558.0">
+        <columns>
+          <TableColumn fx:id="colCustomerId" prefWidth="109.0" text="CustomerId" />
+          <TableColumn fx:id="colName" prefWidth="101.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="98.0" text="Address" />
+            <TableColumn fx:id="colEmail" prefWidth="136.0" text="Email" />
+            <TableColumn fx:id="colContact" prefWidth="129.0" text="Contact" />
+        </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#494e72" height="493.0" layoutX="36.0" layoutY="119.0" opacity="0.42" stroke="#f2eaea" strokeType="INSIDE" width="346.0">
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </Rectangle>
+      <TextField fx:id="txtCustomerId" layoutX="72.0" layoutY="183.0" onAction="#txtSearchOnAction" onKeyReleased="#txtCustomerIdOnKeyReleased" prefHeight="30.0" prefWidth="270.0" promptText="Customer Id">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Text fill="WHITE" layoutX="72.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID:">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <TextField fx:id="txtCustomerName" layoutX="72.0" layoutY="269.0" onKeyReleased="#txtCustomerNameOnKeyReleased" prefHeight="30.0" prefWidth="270.0" promptText="Customer Name" style="-fx-background-color: #F #f8dcdc #f8dcdcA7DF;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.06666667014360428" green="0.0117647061124444" blue="0.0117647061124444" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <Text fill="WHITE" layoutX="72.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name:">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <TextField fx:id="txtCustomerAddress" layoutX="72.0" layoutY="350.0" onKeyReleased="#txtCustomerAddressOnKeyReleased" prefHeight="30.0" prefWidth="270.0" promptText="Customer address" style="-fx-background-color: #F #f8dcdc #f8dcdcA7DF;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Text fill="WHITE" layoutX="72.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer address:">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <TextField fx:id="txtCustomerEmail" layoutX="72.0" layoutY="435.0" onKeyReleased="#txtCustomerEmailOnKeyReleased" prefHeight="30.0" prefWidth="270.0" promptText="Email" style="-fx-background-color: #F #f8dcdc #f8dcdcA7DF;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Text fill="WHITE" layoutX="72.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Email:">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <TextField fx:id="txtCustomerContact" layoutX="72.0" layoutY="522.0" onKeyReleased="#txtContactOnKeyReleased" prefHeight="30.0" prefWidth="270.0" promptText="contact" style="-fx-background-color: #F #f8dcdc #f8dcdcA7DF;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Text fill="WHITE" layoutX="72.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Contact: ">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Label layoutX="397.0" layoutY="37.0" text="Customer Form" underline="true">
+         <font>
+            <Font name="KacstArt" size="36.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.21904761904761913" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8666666746139526" green="0.6235294342041016" blue="0.3960784375667572" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9868420958518982" green="0.9868420958518982" blue="0.9868420958518982" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="676.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icons/icons8-customer-96.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="483.0" layoutY="465.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #3498db;" text="SAVE" textFill="#030303">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-save-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="764.0" layoutY="544.0" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #3498db;" text="CLEAR" textFill="#030303">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-clear-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="764.0" layoutY="465.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #3498db;" text="DELETE" textFill="#030303">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-delete-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="483.0" layoutY="544.0" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #3498db;" text="UPDATE" textFill="#030303">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-update-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

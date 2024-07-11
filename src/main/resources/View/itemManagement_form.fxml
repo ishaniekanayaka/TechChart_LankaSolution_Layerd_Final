@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="ParentItemRootNode" prefHeight="711.0" prefWidth="1040.0" style="-fx-background-color: #090e36;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.controller.ItemManagementFormController">
+    <children>
+      <ImageView fitHeight="711.0" fitWidth="1040.0" layoutX="-1.0" layoutY="-2.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Icons/wallpaper2you_71560.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#494e72" height="513.0" layoutX="22.0" layoutY="119.0" opacity="0.42" stroke="#f2eaea" strokeType="INSIDE" width="346.0">
+            <effect>
+                <GaussianBlur />
+            </effect>
+        </Rectangle>
+        <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="617.0" layoutY="34.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Icons/icons8-item-96.png" />
+            </image>
+        </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="56.0" layoutY="241.0" onAction="#btnPosOnAction" prefHeight="60.0" prefWidth="260.0" style="-fx-background-color: #3498db;" text="POS System" textFill="#f2ecec">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-pos-80.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="56.0" layoutY="357.0" onAction="#btnComputerOnAction" prefHeight="60.0" prefWidth="260.0" style="-fx-background-color: #3498db;" text="Computer Parts" textFill="#f2ecec">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-computer-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="56.0" layoutY="469.0" onAction="#btnBeautyPartsOnAction" prefHeight="60.0" prefWidth="260.0" style="-fx-background-color: #3498db;" text="Beauty Items" textFill="#f2ecec">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-beard-trimmer-80.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <AnchorPane fx:id="ChildItemRootNode" layoutX="382.0" layoutY="126.0" prefHeight="500.0" prefWidth="615.0">
+         <children>
+            <TableView fx:id="tblItems" layoutX="46.0" layoutY="191.0" prefHeight="238.0" prefWidth="499.0">
+               <columns>
+                  <TableColumn fx:id="colItemId" prefWidth="133.0" text="Item ID" />
+                  <TableColumn fx:id="colName" prefWidth="127.0" text="Name" />
+                  <TableColumn fx:id="colQty" prefWidth="93.0" text="QTY" />
+                  <TableColumn fx:id="colPrice" prefWidth="144.0" text="Price" />
+               </columns>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TableView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Icons/icons8-pos-80.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="207.0" layoutY="21.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Icons/icons8-beard-trimmer-80.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="408.0" layoutY="16.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Icons/icons8-computer-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text layoutX="135.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Items " underline="true">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="32.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="0.09047619047619047" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.15294118225574493" green="0.23529411852359772" blue="0.4588235318660736" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Label layoutX="422.0" layoutY="28.0" text="Item Form" underline="true">
+         <font>
+            <Font name="KacstArt" size="36.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.21904761904761913" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8666666746139526" green="0.6235294342041016" blue="0.3960784375667572" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9868420958518982" green="0.9868420958518982" blue="0.9868420958518982" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+    </children>
+</AnchorPane>

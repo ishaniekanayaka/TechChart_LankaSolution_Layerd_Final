@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="PerenetRootNode" prefHeight="692.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.controller.DashboardFormController">
+   <children>
+      <ImageView fitHeight="711.0" fitWidth="365.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Icons/free-photo-of-black-and-white-photo-of-the-moon.jpeg" />
+         </image>
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="52.0" layoutY="176.0" onAction="#btnCustomerOnAction" prefHeight="44.0" prefWidth="294.0" style="-fx-background-color: #2e5a86;" text=" Customer Management" textFill="#f2ecec">
+         <font>
+            <Font name="FreeMono Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-customer-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="52.0" layoutY="227.0" onAction="#btnCustomerServiceOnAction" prefHeight="42.0" prefWidth="294.0" style="-fx-background-color: #2e5a86;" text=" Customer Service" textFill="#f2ecec">
+         <font>
+            <Font name="FreeMono Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/customer-service.214x256.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="52.0" layoutY="277.0" onAction="#btnPaymentOnAction" prefHeight="42.0" prefWidth="294.0" style="-fx-background-color: #2e5a86;" text="Payment Management" textFill="#f2ecec">
+         <font>
+            <Font name="FreeMono Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-payment-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="52.0" layoutY="328.0" onAction="#btnDeliveryOnAction" prefHeight="42.0" prefWidth="294.0" style="-fx-background-color: #2e5a86;" text="Delivery Management" textFill="#f2ecec">
+         <font>
+            <Font name="FreeMono Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-delivery-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="52.0" layoutY="377.0" onAction="#btnSupplierOnAction" prefHeight="42.0" prefWidth="294.0" style="-fx-background-color: #2e5a86;" text="Supplier Management" textFill="#f2ecec">
+         <font>
+            <Font name="FreeMono Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-supplier-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="52.0" layoutY="426.0" onAction="#btnItemOnAction" prefHeight="42.0" prefWidth="294.0" style="-fx-background-color: #2e5a86;" text="Item Management" textFill="#f2ecec">
+         <font>
+            <Font name="FreeMono Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-item-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="52.0" layoutY="476.0" onAction="#btnEmployeeOnAction" prefHeight="42.0" prefWidth="294.0" style="-fx-background-color: #2e5a86;" text="Employee Management" textFill="#f2ecec">
+         <font>
+            <Font name="FreeMono Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-employee-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="52.0" layoutY="527.0" onAction="#btnOrderOnAction" prefHeight="42.0" prefWidth="294.0" style="-fx-background-color: #2e5a86;" text="Order Management" textFill="#f2ecec">
+         <font>
+            <Font name="FreeMono Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-logistics-32.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="52.0" layoutY="123.0" onAction="#btnRegistrationOnAction" prefHeight="42.0" prefWidth="294.0" style="-fx-background-color: #2e5a86;" text=" Register" textFill="#f2ecec">
+         <font>
+            <Font name="FreeMono Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-register-80.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Text layoutX="102.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
+         <font>
+            <Font name="FreeMono Bold" size="36.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="0.09047619047619047" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.15294118225574493" green="0.23529411852359772" blue="0.4588235318660736" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <JFXButton layoutX="124.0" layoutY="604.0" onAction="#btnExitOnAction" prefHeight="44.0" prefWidth="151.0" style="-fx-background-color: #374857;" text="EXIT" textFill="#f2ecec">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-logout-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <AnchorPane fx:id="ChildRootNode" layoutX="368.0" layoutY="1.0" prefHeight="692.0" prefWidth="1030.0">
+         <children>
+            <ImageView fitHeight="711.0" fitWidth="1038.0" layoutY="-6.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Icons/analatics5-new.gif" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#190769" height="109.0" layoutX="335.0" layoutY="580.0" opacity="0.97" stroke="BLACK" strokeType="INSIDE" width="355.0">
+               <effect>
+                  <GaussianBlur />
+               </effect></Rectangle>
+            <Label layoutX="368.0" layoutY="581.0" text="TIME:" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="368.0" layoutY="629.0" text="DATE:" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="446.0" layoutY="580.0" prefHeight="39.0" prefWidth="199.0" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="444.0" layoutY="630.0" prefHeight="39.0" prefWidth="199.0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#190769" height="109.0" layoutX="386.0" layoutY="60.0" opacity="0.68" stroke="BLACK" strokeType="INSIDE" width="254.0">
+               <effect>
+                  <GaussianBlur />
+               </effect>
+            </Rectangle>
+            <Label fx:id="lblTodayCount" layoutX="256.0" layoutY="114.0" prefHeight="44.0" prefWidth="116.0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="396.0" layoutY="75.0" text="Total Orders:">
+               <font>
+                  <Font name="FreeMono Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalCount" layoutX="478.0" layoutY="114.0" prefHeight="44.0" prefWidth="82.0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Text layoutX="52.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TechCartLanka Solution" underline="true">
+         <font>
+            <Font name="Manjari Thin" size="28.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="0.09047619047619047" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.15294118225574493" green="0.23529411852359772" blue="0.4588235318660736" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8421052694320679" green="0.7446393966674805" blue="0.7446393966674805" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+   </children>
+</AnchorPane>

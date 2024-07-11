@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="jmmbBlank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="80f11c19-103c-4657-80c8-85547263139c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (10)"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="836"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="150"/>
+	<parameter name="OrderId" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+    c.customerId,
+    c.c_name,
+    c.email,
+    c.contact_num,
+    c.address,
+    o.orderId,
+    o.date,
+    o.Total,
+    od.QTY,
+    od.unitPrice,
+    i.itemId,
+    i.i_name,
+    i.qtyAvailable,
+    i.itemPrice
+FROM 
+    Customer c
+JOIN 
+    Orders o ON c.customerId = o.customerId
+JOIN 
+    Orders_detail od ON o.orderId = od.OrderId
+JOIN 
+    Items i ON od.itemId = i.itemId
+    WHERE
+     `TechCart_LankaSolution`.`Orders`.`orderId` =  $P{OrderId} ]]>
+	</queryString>
+	<field name="customerId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="customerId"/>
+		<property name="com.jaspersoft.studio.field.label" value="customerId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Customer"/>
+	</field>
+	<field name="c_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="c_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="c_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Customer"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Customer"/>
+	</field>
+	<field name="contact_num" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="contact_num"/>
+		<property name="com.jaspersoft.studio.field.label" value="contact_num"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Customer"/>
+	</field>
+	<field name="address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="address"/>
+		<property name="com.jaspersoft.studio.field.label" value="address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Customer"/>
+	</field>
+	<field name="orderId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="orderId"/>
+		<property name="com.jaspersoft.studio.field.label" value="orderId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Orders"/>
+	</field>
+	<field name="date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="date"/>
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Orders"/>
+	</field>
+	<field name="Total" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Total"/>
+		<property name="com.jaspersoft.studio.field.label" value="Total"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Orders"/>
+	</field>
+	<field name="QTY" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="QTY"/>
+		<property name="com.jaspersoft.studio.field.label" value="QTY"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Orders_detail"/>
+	</field>
+	<field name="unitPrice" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="unitPrice"/>
+		<property name="com.jaspersoft.studio.field.label" value="unitPrice"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Orders_detail"/>
+	</field>
+	<field name="itemId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="itemId"/>
+		<property name="com.jaspersoft.studio.field.label" value="itemId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Items"/>
+	</field>
+	<field name="i_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="i_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="i_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Items"/>
+	</field>
+	<field name="qtyAvailable" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="qtyAvailable"/>
+		<property name="com.jaspersoft.studio.field.label" value="qtyAvailable"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Items"/>
+	</field>
+	<field name="itemPrice" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="itemPrice"/>
+		<property name="com.jaspersoft.studio.field.label" value="itemPrice"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Items"/>
+	</field>
+	<group name="customerId">
+		<groupExpression><![CDATA[$F{customerId}]]></groupExpression>
+	</group>
+	<group name="c_name">
+		<groupExpression><![CDATA[$F{c_name}]]></groupExpression>
+	</group>
+	<group name="email">
+		<groupExpression><![CDATA[$F{email}]]></groupExpression>
+	</group>
+	<group name="contact_num">
+		<groupExpression><![CDATA[$F{contact_num}]]></groupExpression>
+	</group>
+	<group name="address">
+		<groupExpression><![CDATA[$F{address}]]></groupExpression>
+	</group>
+	<group name="orderId">
+		<groupExpression><![CDATA[$F{orderId}]]></groupExpression>
+	</group>
+	<group name="date">
+		<groupExpression><![CDATA[$F{date}]]></groupExpression>
+	</group>
+	<group name="Total">
+		<groupExpression><![CDATA[$F{Total}]]></groupExpression>
+	</group>
+	<group name="QTY">
+		<groupExpression><![CDATA[$F{QTY}]]></groupExpression>
+	</group>
+	<group name="unitPrice">
+		<groupExpression><![CDATA[$F{unitPrice}]]></groupExpression>
+	</group>
+	<group name="itemId">
+		<groupExpression><![CDATA[$F{itemId}]]></groupExpression>
+	</group>
+	<group name="i_name">
+		<groupExpression><![CDATA[$F{i_name}]]></groupExpression>
+	</group>
+	<group name="qtyAvailable">
+		<groupExpression><![CDATA[$F{qtyAvailable}]]></groupExpression>
+	</group>
+	<group name="itemPrice">
+		<groupExpression><![CDATA[$F{itemPrice}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="78" splitType="Stretch">
+			<staticText>
+				<reportElement x="155" y="10" width="260" height="30" uuid="f39bf721-df47-4ef7-bb2b-edf360c84743"/>
+				<textElement>
+					<font fontName="Dialog" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TechCart Lanka Solution]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="76" width="550" height="1" uuid="eec7a374-6306-4cbc-a927-e9c2376808f6"/>
+			</line>
+			<staticText>
+				<reportElement x="240" y="40" width="100" height="30" uuid="49221cbb-96ae-472c-b64e-138574c198e3"/>
+				<textElement>
+					<font fontName="DialogInput" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Welcome!]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="39b178b2-475f-4f6b-82f3-94d88224c571">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19e09638-5fa1-432a-885f-5b686de5534f"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DialogInput" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QTY:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="00850b7b-77ad-46db-b02e-18c9d5ba5a28">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="689764e1-9670-47ff-9d00-cc4c0b50f3dd"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DialogInput" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unit Price:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="1" width="111" height="30" uuid="8c91d20d-7c04-4c6a-a617-20007b15fb38">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cf19fc53-bda8-475a-a073-c86397125529"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DialogInput" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="1" width="100" height="30" uuid="ca6de535-fb06-4230-b2f0-8b62427f85db">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f513141d-20e9-497a-9c66-2c03c65d71fe"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DialogInput" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="0" width="100" height="30" uuid="9aff8910-8d08-4714-be9a-e501b7ef69e6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d4f57719-0689-462a-86f3-6075e142dee0"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DialogInput" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Id:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="222" y="0" width="111" height="30" uuid="6828b28a-b4a7-491c-9c11-9360681566d5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19e09638-5fa1-432a-885f-5b686de5534f"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{QTY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="30" uuid="84c411fd-4331-4112-a20c-a0cf30e3e472">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="689764e1-9670-47ff-9d00-cc4c0b50f3dd"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{unitPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="1" width="111" height="30" uuid="2c5ec1b5-a5da-4e9f-99fc-0602333e03b2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cf19fc53-bda8-475a-a073-c86397125529"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{i_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="-1" width="100" height="30" uuid="d623caa7-77fd-4921-bada-62d985a5c2ac">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f513141d-20e9-497a-9c66-2c03c65d71fe"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="1" width="100" height="30" uuid="4c295b18-f7dc-41d0-8c05-521443ac88c5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d4f57719-0689-462a-86f3-6075e142dee0"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier 10 Pitch" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{itemId}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="49" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="48" width="560" height="1" uuid="1090d996-10b1-4bb2-a168-557345887a27"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="94" splitType="Stretch">
+			<staticText>
+				<reportElement x="210" y="0" width="170" height="30" uuid="6efa6256-1c7b-492f-a9c7-ff6233cae95c"/>
+				<textElement>
+					<font fontName="URW Chancery L" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thank you! Come again.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="88" width="550" height="1" uuid="bcf47c01-c531-4b3c-a1ec-240b7ff30cd5"/>
+			</line>
+			<staticText>
+				<reportElement x="200" y="29" width="200" height="30" uuid="cc297917-6805-4bc2-ab3f-f5d39fbc415a"/>
+				<textElement>
+					<font fontName="Laksaman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amawathura temple rd, Malabe.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="59" width="100" height="20" uuid="deff256b-c522-4a8a-848f-1fd62d0ec5d2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Tel:0767888979]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="450" y="3" width="100" height="30" uuid="222f420f-7795-49f5-8e37-4274570b91f8"/>
+				<textElement>
+					<font fontName="Serif" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="11" y="3" width="100" height="30" uuid="8cf84333-d7b7-45b6-ba72-fe46920ff24d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!--suppress ALL -->
+
+<AnchorPane fx:id="rootNodeRegister" prefHeight="692.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.controller.RegisterFormController">
+   <children>
+      <ImageView fitHeight="749.0" fitWidth="1100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icons/white-notepad-and-ink-pen-on-the-wooden-desk-register-now-concept-photo.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#757471" height="527.0" layoutX="315.0" layoutY="102.0" opacity="0.35" stroke="#dee3e8" strokeType="INSIDE" width="470.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="48.0" fitWidth="58.0" layoutX="613.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icons/icons8-register-80.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtUserId" layoutX="405.0" layoutY="257.0" onKeyReleased="#txtUserIDOnKeyReleased" prefHeight="30.0" prefWidth="270.0" promptText="User ID">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Text fill="WHITE" layoutX="405.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID:">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Text fill="WHITE" layoutX="405.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <TextField fx:id="txtUserName" layoutX="405.0" layoutY="342.0" onKeyReleased="#txtUserNameOnKeyReleased" prefHeight="30.0" prefWidth="270.0" promptText="User Name">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Text fill="WHITE" layoutX="405.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name:">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <TextField fx:id="txtPassword" layoutX="405.0" layoutY="426.0" onKeyReleased="#txtUserPasswordOnKeyReleased" prefHeight="30.0" prefWidth="270.0" promptText="Password">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Label layoutX="438.0" layoutY="152.0" text="REGISTER" underline="true">
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.4000000000000001" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8666666746139526" green="0.6235294342041016" blue="0.3960784375667572" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9868420958518982" green="0.9548611044883728" blue="0.9548611044883728" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="FreeMono" size="36.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="485.0" layoutY="527.0" onAction="#btnRegisterOnAction" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #5b5353;" text="REGISTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-register-100%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

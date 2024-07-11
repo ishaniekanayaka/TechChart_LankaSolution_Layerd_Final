@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNodeOrder" prefHeight="711.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.controller.OrderManagementFormController">
+   <children>
+      <ImageView fitHeight="711.0" fitWidth="1040.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Icons/wallpaper2you_71560.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </ImageView>
+      <Label layoutX="391.0" layoutY="43.0" text="Order Form" underline="true">
+         <font>
+            <Font name="KacstArt" size="36.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.21904761904761913" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8666666746139526" green="0.6235294342041016" blue="0.3960784375667572" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9868420958518982" green="0.9868420958518982" blue="0.9868420958518982" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <ImageView fitHeight="42.0" fitWidth="104.0" layoutX="601.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icons/customer-service.214x256.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbCustomerID" layoutX="71.0" layoutY="157.0" onAction="#cmbCustomerIdOnAction" prefHeight="29.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbItemName" layoutX="71.0" layoutY="255.0" onAction="#cmbItemNameOnAction" prefHeight="29.0" prefWidth="150.0" />
+      <Label layoutX="71.0" layoutY="119.0" text="Customer Id" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font></Label>
+      <Label layoutX="75.0" layoutY="224.0" text="Item Name" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font></Label>
+      <JFXButton buttonType="RAISED" layoutX="231.0" layoutY="155.0" onAction="#btnAddNewCustomerOnAction" prefHeight="16.0" prefWidth="81.0" style="-fx-background-color: #2ecc71;" text="NEW">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-register-100%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblOrderCart" layoutX="70.0" layoutY="363.0" prefHeight="238.0" prefWidth="744.0">
+         <columns>
+            <TableColumn fx:id="colItemID" minWidth="0.0" prefWidth="97.0" text="Item ID" />
+            <TableColumn fx:id="colItemName" minWidth="0.0" prefWidth="165.0" text="Item Name" />
+            <TableColumn fx:id="colUnitPrice" minWidth="0.0" prefWidth="149.0" text="Unit Price" />
+            <TableColumn fx:id="colQTY" minWidth="0.0" text="QTY" />
+            <TableColumn fx:id="colTotalPrice" minWidth="0.0" prefWidth="146.0" text="Total Amount" />
+            <TableColumn fx:id="colAction" minWidth="0.0" prefWidth="106.0" text="Action" />
+         </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <Label layoutX="357.0" layoutY="119.0" text="Customer Name" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustomerName" layoutX="359.0" layoutY="155.0" prefHeight="29.0" prefWidth="192.0" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="575.0" layoutY="119.0" text="Order Id" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderId" layoutX="576.0" layoutY="155.0" prefHeight="29.0" prefWidth="192.0" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="285.0" layoutY="224.0" text="Item ID" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblItemId" layoutX="285.0" layoutY="260.0" prefHeight="29.0" prefWidth="150.0" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="454.0" layoutY="223.0" text="Unit Price" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUnitPrice" layoutX="454.0" layoutY="259.0" prefHeight="29.0" prefWidth="150.0" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="632.0" layoutY="220.0" text="Quentity On Hand" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblQuentityOnHand" layoutX="635.0" layoutY="258.0" prefHeight="29.0" prefWidth="150.0" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="845.0" layoutY="223.0" text="QTY" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtQTY" layoutX="835.0" layoutY="259.0" onKeyReleased="#txtQTYOnKeyReleased" prefHeight="24.0" prefWidth="53.0" />
+      <JFXButton buttonType="RAISED" layoutX="840.0" layoutY="382.0" onAction="#btnAddToCartOnAction" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: #3498db;" text="Add to Cart">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-add-to-cart-100.png" />
+               </image></ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="839.0" layoutY="468.0" onAction="#btnPlaceOrderOnAction" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: #3498db;" text="Place Order">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-purchase-order-96.png" />
+               </image></ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="503.0" layoutY="631.0" text="Net Total :-" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNetTotal" layoutX="597.0" layoutY="631.0" prefHeight="29.0" prefWidth="150.0" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="794.0" layoutY="119.0" text="Order Date" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderDate" layoutX="792.0" layoutY="155.0" prefHeight="29.0" prefWidth="192.0" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="840.0" layoutY="541.0" onAction="#btnBillOnAction" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: #3498db;" text="BILL">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8-purchase-order-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
